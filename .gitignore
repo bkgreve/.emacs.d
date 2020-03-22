@@ -22,3 +22,4 @@ emms/*
 /.cask/
 /ido.last
 tramp
+eply/*

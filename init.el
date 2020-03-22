@@ -48,6 +48,7 @@ There are two things you can do about this warning:
   )
 (package-initialize)
 
-
+;; elpy for Python
+(elpy-enable)
 
 
