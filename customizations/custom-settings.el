@@ -33,6 +33,12 @@
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (helm-mode 1)
 
-
+;; Theme settings
+(require 'powerline)
+(require 'moe-theme)
+(setq moe-theme-highlight-buffer-id t)
+(moe-theme-set-color 'blue)
+(load-theme 'moe-dark t)
+(powerline-moe-theme)
 
 (provide 'custom-settings)
