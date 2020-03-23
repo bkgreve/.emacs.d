@@ -29,6 +29,7 @@
 (add-to-list 'load-path customizations)
 
 (require 'custom-settings)
+(require 'js-customizations)
 
 ;; Taken straight from MELPA...
 (require 'package)

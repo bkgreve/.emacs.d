@@ -41,4 +41,7 @@
 (load-theme 'moe-dark t)
 (powerline-moe-theme)
 
+;; Show me the...numbers!
+(display-line-numbers-mode 1)
+
 (provide 'custom-settings)
