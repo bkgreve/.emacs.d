@@ -42,6 +42,9 @@
 (powerline-moe-theme)
 
 ;; Show me the...numbers!
-(display-line-numbers-mode 1)
+(global-display-line-numbers-mode)
+
+;; Let me see the markdown
+(setq markdown-command "pandoc")
 
 (provide 'custom-settings)
