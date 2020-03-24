@@ -14,10 +14,14 @@ git@github.com:bkgreve/.emacs.d.git
 
 After cloning the repository, the following packages need to be installed:
 * markdown-mode
+   * Requires a markdown processor (e.g., Pandoc)
 * prettier-js
+   * Requires prettier to also be installed with npm
 * tide
+   * Requires standardx to also be installed via npm
 * flycheck
 * elpy
+   * Ensure Python 3 is available
 * moe-theme
 * powerline
 * helm
