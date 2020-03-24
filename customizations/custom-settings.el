@@ -13,7 +13,8 @@
       browser-url-generic-program "firefox")
 
 ;; Truncate long buffer names
-(setq-default mode-line-buffer-identification (list -60 (propertized-buffer-identification "%12b")))
+(setq-default mode-line-buffer-identification
+              (list -60 (propertized-buffer-identification "%12b")))
 
 ;; I better use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
@@ -46,5 +47,9 @@
 
 ;; Let me see the markdown
 (setq markdown-command "pandoc")
+
+;; Don't make lines too long
+(setq display-fill-column-indicator-column 80)
+(display-fill-column-indicator-mode)
 
 (provide 'custom-settings)
