@@ -5,30 +5,29 @@ was created in Emacs 27.0.90 (built from source in Debian 10).
 
 ## Setup
 
+These configuration files rely on [Cask](https://github.com/cask/cask) for package management. Prior to installing these, ensure that the latest version of Cask is installed.
+
 Clone this repository into your home directory:
 ```sh
 git@github.com:bkgreve/.emacs.d.git
+cd .emacs.d/
+cask install
 ```
 
 ## Packages
 
-After cloning the repository, the following packages need to be installed:
+The following packages (installed with Cask) have certain external dependencies:
 * markdown-mode
    * Requires a markdown processor (e.g., Pandoc)
 * prettier-js
    * Requires prettier to also be installed with npm
 * tide
    * Requires standardx to also be installed via npm
-* flycheck
 * elpy
    * Ensure Python 3 is available
-* moe-theme
-* powerline
-* helm
 
 ## TODOs
 
 Things I still want to implement:
-* Some sort of package management to automate installing the above packages
 * Automatically finding the `node_modules` directory when working on JS projects
 * Any modifications needed to also make this configuration Mac OS friendly
