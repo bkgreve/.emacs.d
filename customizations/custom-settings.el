@@ -48,6 +48,9 @@
 ;; Let me see the markdown
 (setq markdown-command "pandoc")
 
+;; Python mode
+(elpy-enable)
+
 ;; Don't make lines too long
 (setq display-fill-column-indicator-column 80)
 (display-fill-column-indicator-mode)

@@ -1,6 +1,13 @@
 ;; Some of this follows keelerm84's approach because his dotfiles are
 ;; always well organized
 
+;; I hate doing this, but how cask loads packages isn't fully
+;; compatible with Emacs 27 and raises a warning about an
+;; unnecessary call to package-initalize
+;; This suppresses that for now (warnings can still be accessed in
+;; the warnings buffer
+(setq warning-minimum-level :error)
+
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -28,28 +35,11 @@
 (add-to-list 'load-path misc-dir)
 (add-to-list 'load-path customizations)
 
+;; Install packages
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
 (require 'custom-settings)
 (require 'js-customizations)
-
-;; Taken straight from MELPA...
-(require 'package)
-(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
-                    (not (gnutls-available-p))))
-       (proto (if no-ssl "http" "https")))
-  (when no-ssl (warn "\
-Your version of Emacs does not support SSL connections,
-which is unsafe because it allows man-in-the-middle attacks.
-There are two things you can do about this warning:
-1. Install an Emacs version that does support SSL and be safe.
-2. Remove this warning from your init file so you won't see it again."))
-  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
-  ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
-  ;; and `package-pinned-packages`. Most users will not need or want to do this.
-  ;;(add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
-  )
-(package-initialize)
-
-;; elpy for Python
-(elpy-enable)
 
 

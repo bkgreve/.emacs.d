@@ -1,0 +1,12 @@
+(source gnu)
+(source melpa)
+
+(depends-on "auctex")
+(depends-on "markdown-mode")
+(depends-on "prettier-js")
+(depends-on "tide")
+(depends-on "flycheck")
+(depends-on "elpy")
+(depends-on "moe-theme")
+(depends-on "powerline")
+(depends-on "helm")
