@@ -1,14 +1,23 @@
 ;; My preferred custom settings
 
-;; Shut up, bell!
+;; Changing some of the default settings...
+;; Namely, quieting the bell, overwriting selections, spaces instead
+;; of tabs, inhibiting the startup screen, line number mode, fill
+;; column settings
 (setq ring-bell-function 'ignore)
-
-;; Enable selection overwrite
 (delete-selection-mode 1)
-
-;; Visual line mode
 (global-visual-line-mode t)
+(setq-default indent-tabs-mode nil)
+(setq inhibit-startup-screen t)
+(global-linum-mode t)
+(setq display-fill-column-indicator-column 80)
+(global-display-fill-column-indicator-mode)
 
+(put 'narrow-to-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
+
+;; Set the browser for, e.g., following links in org mode files
 (setq browse-url-browser-function 'browser-url-generic
       browser-url-generic-program "firefox")
 
@@ -16,17 +25,11 @@
 (setq-default mode-line-buffer-identification
               (list -60 (propertized-buffer-identification "%12b")))
 
-;; I better use spaces instead of tabs
-(setq-default indent-tabs-mode nil)
-
 ;; Move around windows
 (global-set-key (kbd "C-c <left>")  'windmove-left)                 
 (global-set-key (kbd "C-c <right>") 'windmove-right)                
 (global-set-key (kbd "C-c <up>")    'windmove-up)                   
 (global-set-key (kbd "C-c <down>")  'windmove-down)
-
-;; I'm familiar...
-(setq inhibit-startup-screen t)
 
 ;; helm mode settings
 (require 'helm-config)
@@ -42,17 +45,11 @@
 (load-theme 'moe-dark t)
 (powerline-moe-theme)
 
-;; Show me the...numbers!
-(global-linum-mode t)
-
 ;; Let me see the markdown
 (setq markdown-command "pandoc")
 
 ;; Python mode
 (elpy-enable)
 
-;; Don't make lines too long
-(setq display-fill-column-indicator-column 80)
-(display-fill-column-indicator-mode)
 
 (provide 'custom-settings)
