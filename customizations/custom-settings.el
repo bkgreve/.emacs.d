@@ -38,12 +38,15 @@
 (helm-mode 1)
 
 ;; Theme settings
-(require 'powerline)
 (require 'moe-theme)
-(setq moe-theme-highlight-buffer-id t)
-(moe-theme-set-color 'blue)
-(load-theme 'moe-dark t)
-(powerline-moe-theme)
+(load-theme 'manoj-dark)
+(powerline-default-theme)
+(setq powerline-height 20)
+(set-face-attribute 'mode-line nil
+                    :box "blue")
+(setq powerline-image-apple-rgb nil)
+(setq powerline-gui-use-vcs-glyph t)
+
 
 ;; Let me see the markdown
 (setq markdown-command "pandoc")
