@@ -10,3 +10,4 @@
 (depends-on "moe-theme")
 (depends-on "powerline")
 (depends-on "helm")
+(depends-on "magit")
