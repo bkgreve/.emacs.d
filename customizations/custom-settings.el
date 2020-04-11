@@ -35,6 +35,9 @@
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (helm-mode 1)
 
+;; Magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; Theme settings
 (require 'moe-theme)
 (load-theme 'manoj-dark)
