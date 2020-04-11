@@ -10,8 +10,6 @@
 (setq-default indent-tabs-mode nil)
 (setq inhibit-startup-screen t)
 (global-linum-mode t)
-(setq display-fill-column-indicator-column 80)
-(global-display-fill-column-indicator-mode)
 
 (put 'narrow-to-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
