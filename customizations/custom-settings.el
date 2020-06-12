@@ -54,6 +54,10 @@
 
 ;; Python mode
 (elpy-enable)
+;; For large files with inconsistent indentation,
+;; Emacs may incorrectly guess the indentation
+(setq python-indent-guess-indent-offset nil)
+(setq python-indent-offset 4)
 
 
 (provide 'custom-settings)
