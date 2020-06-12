@@ -7,7 +7,8 @@
 ;; This suppresses that for now (warnings can still be accessed in
 ;; the warnings buffer
 (setq warning-minimum-level :error)
-
+;; For Mac, you can uncomment the following line to set a default directory
+;; (setq default-directory "/Users/<username>/")
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -35,8 +36,11 @@
 (add-to-list 'load-path misc-dir)
 (add-to-list 'load-path customizations)
 
+
 ;; Install packages
+;; For Mac, comment the following line and uncomment the next
 (require 'cask "~/.cask/cask.el")
+;; (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
 (require 'custom-settings)

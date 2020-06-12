@@ -31,3 +31,8 @@ The following packages (installed with Cask) have certain external dependencies:
 Things I still want to implement:
 * Automatically finding the `node_modules` directory when working on JS projects
 * Any modifications needed to also make this configuration Mac OS friendly
+
+## MacOS
+
+There are a couple of spots in `init.el` that can be uncommented to make this configuration work
+reasonable well on Mac OS (tested with Emacs 28). Search for `Mac OS` in the comments.
