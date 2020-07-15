@@ -13,6 +13,10 @@
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
+
+;; Auto-reload buffer on file changes
+(global-auto-revert-mode)
+
 (defvar dotfiles-dir (file-name-directory
 		      (or (buffer-file-name) load-file-name)))
 (defvar misc-dir (expand-file-name "misc" dotfiles-dir))

@@ -58,6 +58,33 @@
 ;; Emacs may incorrectly guess the indentation
 (setq python-indent-guess-indent-offset nil)
 (setq python-indent-offset 4)
+(setq elpy-rpc-ignored-buffer-size 1024000)
+
+;; Org-mode
+(setq org-todo-keywords
+      '((sequence "TODO" "IN PROGRESS" "ON HOLD" "IN REVIEW" "DONE")))
+(setq org-todo-keyword-faces
+      '(
+        ("TODO" . (:background "red" :weight bold))
+        ("IN PROGRESS" . (:background "green" :weight bold))
+        ("ON HOLD" . (:background "red" :weight bold))
+        ("IN REVIEW" . (:background "cyan" :weight bold))
+        ("DONE" . (:background "blue" :weight bold))
+        )
+      )
+(setq org-tag-alist
+      '(
+        ("Feature" . ?f)
+        ("Meeting" . ?m)
+        )
+      )
+(setq org-tag-faces
+      '(
+        ("Feature" . "yellow")
+        ("Meeting" . "purple")
+        )
+      )
+(setq org-src-fontify-natively t)
 
 ;; This can be risky, but that's ok
 (setq backup-directory-alist
