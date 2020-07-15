@@ -32,6 +32,7 @@
 ;; Write backup files to own directory
 (setq backup-directory-alist `(("." . ,(expand-file-name
                                         (concat dotfiles-dir "backups")))))
+(setq create-lockfiles nil)
 
 (add-to-list 'load-path misc-dir)
 (add-to-list 'load-path customizations)

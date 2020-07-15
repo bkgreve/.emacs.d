@@ -59,5 +59,10 @@
 (setq python-indent-guess-indent-offset nil)
 (setq python-indent-offset 4)
 
+;; This can be risky, but that's ok
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
 (provide 'custom-settings)

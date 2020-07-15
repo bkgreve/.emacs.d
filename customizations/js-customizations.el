@@ -13,15 +13,12 @@
 (add-hook 'js-mode-hook #'setup-tide-mode)
 ;; TODO: standardx only works when installed locally
 ;; Figure out a way to indicate local installations of it
-(setq flycheck-javascript-standard-executable "/home/bkgreve/run-cal/node_modules/standardx/bin/cmd.js")
+(setq flycheck-javascript-standard-executable "/home/bkgreve/route-data-visualizer/node_modules/standardx/bin/cmd.js")
 (add-hook 'js-mode-hook 'prettier-js-mode)
 
 
 (setq prettier-js-args '(
   "--trailing-comma" "all"
-  "--single-quote" "true"
-  "--jsx-single-quote" "true"
-  "--jsx-bracket-same-line" "true"
   "--print-width" "100"
   ))
 
