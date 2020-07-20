@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: If statement
+# key: iff
+# --
+if (${condition}) {
+   ${body}
+}
