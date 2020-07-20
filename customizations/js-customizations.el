@@ -14,7 +14,11 @@
 ;; TODO: standardx only works when installed locally
 ;; Figure out a way to indicate local installations of it
 (setq flycheck-javascript-standard-executable "/home/bkgreve/route-data-visualizer/node_modules/standardx/bin/cmd.js")
-(add-hook 'js-mode-hook 'prettier-js-mode)
+(add-hook 'js-mode-hook (lambda ()
+                          (prettier-js-mode)
+                          (yas-minor-mode)
+                          (local-set-key (kbd "C-c ;") 'comment-line)
+                          ))
 
 
 (setq prettier-js-args '(
