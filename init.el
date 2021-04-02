@@ -41,7 +41,8 @@
 (add-to-list 'load-path misc-dir)
 (add-to-list 'load-path customizations)
 
-
+;; Let's always delete trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; Install packages
 ;; For Mac, comment the following line and uncomment the next
 (require 'cask "~/.cask/cask.el")

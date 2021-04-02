@@ -85,7 +85,9 @@
         )
       )
 (setq org-src-fontify-natively t)
-
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((java . t)))
 ;; This can be risky, but that's ok
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
