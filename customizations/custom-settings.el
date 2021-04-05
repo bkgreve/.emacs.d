@@ -24,10 +24,13 @@
               (list -60 (propertized-buffer-identification "%12b")))
 
 ;; Move around windows
-(global-set-key (kbd "C-c <left>")  'windmove-left)                 
-(global-set-key (kbd "C-c <right>") 'windmove-right)                
-(global-set-key (kbd "C-c <up>")    'windmove-up)                   
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
+
+;; Comment region
+(global-set-key (kbd "C-c c") 'comment-region)
 
 ;; helm mode settings
 (require 'helm-config)
